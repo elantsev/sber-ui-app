@@ -1,0 +1,9 @@
+*.jpg
+*.png
+*.svg
+*.gif
+*.html
+*.d.ts
+node_modules
+jest.setup.ts
+.eslintrc*.js
