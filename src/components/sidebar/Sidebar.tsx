@@ -13,7 +13,7 @@ import { Drawer, DrawerHeader } from './style';
 
 
 export const Sidebar: FC = () => {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
 
   return (
     <Drawer variant="permanent" open={open}>

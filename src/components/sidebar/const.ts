@@ -20,42 +20,42 @@ export const SIDEBAR_LINKS: Link[] = [
   {
     title: 'Запрос',
     icon: Question,
-    path: 'request',
+    path: '/request',
   },
   {
     title: 'Список сообщений',
     icon: List,
-    path: 'messages',
+    path: '/messages',
   },
   {
     title: 'Журнал операций',
     icon: Log,
-    path: 'log',
+    path: '/log',
   },
   {
     title: 'Самодиагностика',
     icon: SelfTest,
-    path: 'self-test',
+    path: '/self-test',
   },
   {
     title: 'Отчет',
     icon: Report,
-    path: 'report',
+    path: '/report',
   },
   {
     title: 'Криптосервисы',
     icon: Cryptoservices,
-    path: 'cryptoservices',
+    path: '/cryptoservices',
   },
   {
     title: 'DataFix',
     icon: DataFix,
-    path: 'dataFix',
+    path: '/dataFix',
   },
   {
     title: 'Информация об опубликованных API',
     icon: PublishedAPIinformation,
-    path: 'published-API-information',
+    path: '/published-API-information',
   },
 ];
 
@@ -63,16 +63,16 @@ export const SIDEBAR_FOOTER_LINKS: Link[] = [
   {
     title: 'Настройки',
     icon: Settings,
-    path: 'settings',
+    path: '/settings',
   },
   {
     title: 'Информация',
     icon: Info,
-    path: 'info',
+    path: '/info',
   },
   {
     title: 'Выход',
     icon: Exit,
-    path: 'exit',
+    path: '/exit',
   },
 ];
