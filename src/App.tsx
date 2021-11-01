@@ -15,9 +15,6 @@ const App = () => {
           <Route exact path="/request/united_json" component={UnitedJSON} />
         </Switch>
       </Layout>
-
-
-
     </>
   );
 };
