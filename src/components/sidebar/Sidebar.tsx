@@ -10,38 +10,41 @@ import { SidebarNavLink } from './components';
 import { SIDEBAR_FOOTER_LINKS, SIDEBAR_LINKS } from './const';
 import { Drawer, DrawerHeader } from './style';
 
-
-
 export const Sidebar: FC = () => {
   const [open, setOpen] = useState(true);
 
   return (
     <Drawer variant="permanent" open={open}>
       <DrawerHeader sx={{ padding: open ? '2rem 0.5rem' : '2rem 0.1875rem' }}>
-        <Link to='/'>
+        <Link to="/">
           <Logo />
         </Link>
       </DrawerHeader>
       <Divider />
-      <ButtonGroup orientation='vertical' color='primary'>
+      <ButtonGroup orientation="vertical" color="primary">
         {SIDEBAR_LINKS.map((link, index) => (
           <SidebarNavLink {...link} key={index} />
         ))}
       </ButtonGroup>
       <Box flexGrow={1} />
       <Divider />
-      <ButtonGroup orientation='vertical' color='primary' >
+      <ButtonGroup orientation="vertical" color="primary">
         {SIDEBAR_FOOTER_LINKS.map((link, index) => (
           <SidebarNavLink {...link} key={index} />
         ))}
       </ButtonGroup>
-      <Button fullWidth onClick={() => setOpen(open => !open)}
-        sx={{ justifyContent: 'end', marginTop: '3rem', fill: '#262626', paddingRight: '0.8rem' }}
+      <Button
+        fullWidth
+        onClick={() => setOpen((open) => !open)}
+        sx={{
+          justifyContent: 'end',
+          marginTop: '3rem',
+          fill: '#262626',
+          paddingRight: '0.8rem',
+        }}
       >
         {open ? <ArrowLeft /> : <ArrowRight />}
       </Button>
-    </Drawer >
-  )
-}
-
-
+    </Drawer>
+  );
+};

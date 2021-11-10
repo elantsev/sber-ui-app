@@ -12,7 +12,6 @@ export const openedMixin = (theme: Theme): CSSObject => ({
   overflowX: 'hidden',
 });
 
-
 export const closedMixin = (theme: Theme): CSSObject => ({
   transition: theme.transitions.create('width', {
     easing: theme.transitions.easing.sharp,
@@ -31,33 +30,32 @@ export const DrawerHeader = styled('div')(({ theme }) => ({
   ...theme.mixins.toolbar,
 }));
 
-
-export const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' })(
-  ({ theme, open }) => ({
-    width: drawerWidth,
-    flexShrink: 0,
-    whiteSpace: 'nowrap',
-    boxSizing: 'border-box',
-    ...(open && {
-      ...openedMixin(theme),
-      '& .MuiDrawer-paper': openedMixin(theme),
-    }),
-    ...(!open && {
-      ...closedMixin(theme),
-      '& .MuiDrawer-paper': closedMixin(theme),
-    }),
-    '&.MuiDrawer-root .MuiPaper-root': {
-      backgroundColor: 'rgba(38, 38, 38, 0.05)',
-      ':after': {
-        zIndex: -1,
-        content: "''",
-        position: 'absolute',
-        left: 0,
-        top: 0,
-        bottom: 0,
-        width: '3.5rem',
-        backgroundColor: 'rgba(38, 38, 38, 0.1)',
-      }
-    },
+export const Drawer = styled(MuiDrawer, {
+  shouldForwardProp: (prop) => prop !== 'open',
+})(({ theme, open }) => ({
+  width: drawerWidth,
+  flexShrink: 0,
+  whiteSpace: 'nowrap',
+  boxSizing: 'border-box',
+  ...(open && {
+    ...openedMixin(theme),
+    '& .MuiDrawer-paper': openedMixin(theme),
   }),
-);
+  ...(!open && {
+    ...closedMixin(theme),
+    '& .MuiDrawer-paper': closedMixin(theme),
+  }),
+  '&.MuiDrawer-root .MuiPaper-root': {
+    backgroundColor: 'rgba(38, 38, 38, 0.05)',
+    ':after': {
+      zIndex: -1,
+      content: "''",
+      position: 'absolute',
+      left: 0,
+      top: 0,
+      bottom: 0,
+      width: '3.5rem',
+      backgroundColor: 'rgba(38, 38, 38, 0.1)',
+    },
+  },
+}));
