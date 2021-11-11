@@ -184,6 +184,7 @@ export const StickyHeadTable: React.FC = () => {
         page={page}
         onPageChange={handleChangePage}
         onRowsPerPageChange={handleChangeRowsPerPage}
+        labelRowsPerPage="Строк на странице"
       />
     </Paper>
   );
