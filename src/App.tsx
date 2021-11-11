@@ -1,5 +1,5 @@
 import { CssBaseline } from '@mui/material';
-import { Request } from 'containers';
+import { Messages, Request } from 'containers';
 import { Route, Switch } from 'react-router';
 import { UnitedJSON } from './containers/Request/UnitedJSON';
 import { Layout } from './layout';
@@ -12,6 +12,7 @@ const App = () => {
         <Switch>
           <Route exact path="/request" component={Request} />
           <Route exact path="/request/united_json" component={UnitedJSON} />
+          <Route exact path="/messages" component={Messages} />
         </Switch>
       </Layout>
     </>

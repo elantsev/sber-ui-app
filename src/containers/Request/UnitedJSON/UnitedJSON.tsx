@@ -1,11 +1,6 @@
-import {
-  Autocomplete,
-  Button,
-  Paper,
-  TextField,
-  Typography,
-} from '@mui/material';
+import { Button, Paper, TextField, Typography } from '@mui/material';
 import { Box } from '@mui/system';
+import { Autocomplete } from 'components';
 import { useState } from 'react';
 
 const REQUEST_TYPES = [
@@ -44,11 +39,6 @@ export const UnitedJSON = () => {
       >
         <Box display="flex" gap={10}>
           <Autocomplete
-            fullWidth
-            openOnFocus
-            autoHighlight
-            freeSolo
-            disablePortal
             value={value}
             onChange={(event: any, newValue: any) => {
               setValue(newValue);
@@ -63,11 +53,6 @@ export const UnitedJSON = () => {
           />
 
           <Autocomplete
-            fullWidth
-            openOnFocus
-            autoHighlight
-            freeSolo
-            disablePortal
             value={versionValue}
             onChange={(event: any, newValue: any) => {
               setVersionValue(newValue);
