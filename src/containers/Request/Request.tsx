@@ -1,5 +1,6 @@
-import { Autocomplete, TextField, Typography } from '@mui/material';
+import { TextField, Typography } from '@mui/material';
 import { Box } from '@mui/system';
+import { Autocomplete } from 'components';
 import { useState } from 'react';
 import { StyledLink, StyledPaper } from './style';
 
@@ -19,11 +20,6 @@ export const Request = () => {
   return (
     <Box>
       <Autocomplete
-        fullWidth
-        openOnFocus
-        autoHighlight
-        freeSolo
-        disablePortal
         value={value}
         onChange={(event: any, newValue: any) => {
           setValue(newValue);
