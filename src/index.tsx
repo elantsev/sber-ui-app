@@ -6,6 +6,7 @@ import App from './App';
 import { store } from './app/store';
 import './index.css';
 // commit1
+// commit2
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
